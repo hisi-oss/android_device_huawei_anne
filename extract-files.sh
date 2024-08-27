@@ -16,6 +16,9 @@ function blob_fixup() {
 	odm/etc/libnfc-nci.conf)
 	    sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
 	    ;;
+        odm/etc/init/anne.rc)
+            sed -i 's/dsm//g' "${2}"
+            ;;
         odm/lib64/hwcam/hwcam.hi6250.m.ANNE.so)
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.biometrics.hwsecurefacerecognize@1.0.so" "${2}"
