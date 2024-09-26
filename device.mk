@@ -27,5 +27,9 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayAnne \
     WifiResOverlayAnne
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
